@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %} Carol Pepper-Cooper{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carol Pepper-Cooper portfolio">
+    <meta name="author" content="Seth Cooper">
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/readable/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Carol Pepper-Cooper</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+             <li><a href="/galleries/landscapes">Landscapes</a></li>
+            <li><a href="/galleries/mindscapes-dreams">Mindscapes & Dreams</a></li>
+            <li><a href="/galleries/non-objective-drawings">Non-Objective Drawings</a></li>
+            <li><a href="/galleries/persons-interiors">Persons & Interiors</a></li>
+            <li><a href="/galleries/judaica">Judaica</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+             <li><a href="#">Statement & Vita</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Comments</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+          {% block headertop %}{% endblock %}
+          <h2>{% block title %}{% endblock %}</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            {% block content %} Default Content {% endblock %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br><br>
+    <div id="footer">
+      <div class="container text-muted">
+        <div class="col-xs-12 col-md-4">Web Site, Contents, and All Images</div>
+        <div class="col-xs-12 col-md-4">© Carol Pepper-Cooper</div>
+        <div class="col-xs-12 col-md-4">All Rights Reserved</div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    {% block bottomscripts %}{% endblock %}
+  </body>
+</html>
