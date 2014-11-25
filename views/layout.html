@@ -29,11 +29,10 @@
     <div id="wrap">
 
       <!-- Fixed navbar -->
-      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom" role="navigation">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -42,13 +41,12 @@
       <a class="navbar-brand" href="/">Carol Pepper-Cooper</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+    <div class="collapse navbar-collapse dropdown-custom" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav ">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-             <li><a href="/galleries/landscapes">Landscapes</a></li>
+          <a href="#" class="dropdown-toggle dropdown-custom" data-toggle="dropdown">Galleries <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-custom" role="menu">
+            <li><a href="/galleries/landscapes" >Landscapes</a></li>
             <li><a href="/galleries/mindscapes-dreams">Mindscapes & Dreams</a></li>
             <li><a href="/galleries/non-objective-drawings">Non-Objective Drawings</a></li>
             <li><a href="/galleries/persons-interiors">Persons & Interiors</a></li>
@@ -56,19 +54,17 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-             <li><a href="#">Statement & Vita</a></li>
-            <li><a href="#">Press</a></li>
+          <a href="#" class="dropdown-toggle dropdown-custom" data-toggle="dropdown">About <span class="caret"></span></a>
+          <ul class="dropdown-menu navbar-custom " role="menu">
+             <li><a href="/statement">Statement & Vita</a></li>
+            <li><a href="/press">Press</a></li>
           </ul>
         </li>
-        <li><a href="#">Comments</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/comments">Comments</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
-
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
       <!-- Begin page content -->
       <div class="container">
@@ -79,27 +75,42 @@
         <div class="row">
           <div class="col-md-12">
             {% block content %} Default Content {% endblock %}
+            {% block modals %}
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    {% endblock %}
           </div>
         </div>
       </div>
-
     </div>
+<div id="footer">
+  <div class="col-xs-12 col-sm-12 col-md-12 text-muted" text align="center">
+    Web Site, Contents, and All Images<br>© Carol Pepper-Cooper<br>All Rights Reserved<br><br>
+  </div>
+</div>
 
-    <br><br><br>
-    <div id="footer">
-      <div class="container text-muted">
-        <div class="col-xs-12 col-md-4">Web Site, Contents, and All Images</div>
-        <div class="col-xs-12 col-md-4">© Carol Pepper-Cooper</div>
-        <div class="col-xs-12 col-md-4">All Rights Reserved</div>
-      </div>
-    </div>
+
+
+
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    {% block bottomscripts %}{% endblock %}
+
+
+   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+  <script src="/javascripts/modals.js"></script>
+
+
+
   </body>
 </html>

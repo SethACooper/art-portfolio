@@ -2,7 +2,78 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+.vitae{
+  font: 16px "Times New Roman", Georgia, Serif;
+}
+
+.dark{
+  color: black;
+}
+
+.navbar-custom{
+  background-color: #000000;
+  /*max-height: 80px;*/
+}
+
+.dropdown-custom{
+  background-color: #000000;
+  /*max-height: 600px;*/
+}
 
 a {
   color: #00B7FF;
+}
+
+ ul {
+  padding:0 0 0 0;
+  margin:0 0 0 0;
+      }
+ul li {
+  list-style:none;
+  margin:0 0 25px 0;
+ .}
+ul li img {
+  cursor: pointer;
+  }
+
+.cards{
+  outline: 1px solid black;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+
+.col-max {
+    max-width:320px;
+}
+
+.col-max-box {
+  max-width:1200px;
+}
+
+.col-max-text {
+  max-width:900px;
+}
+
+.col-max-name {
+  max-width:500px;
+}
+
+.vitae{
+  font-family: "Times New Roman", Georgia, Serif;;
+}
+
+.navbar-custom li a {
+    color:#4582ec;
 }

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+
+{%for comment in comments%}
+ <ul class="row row-centered">
+  <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-max-text col-centered"  text align="center"><div><div text align="left"><span class='h6'>{{comment.name}}</span><br>{{comment.date|date('m-d-Y')}}<br><div class='cards'><span class='h6'>{{comment.subject}}</span><br><br>{{comment.text}}</div></div></div><br></li>
+</ul>
+
+
+{%endfor%}
+
+
+{% if sendMsg%}
+<h4>{{msg}}</h4>
+{% endif %}
+
+{%include "./partials/_comment-form.html"%}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+
+{% if sendMsg%}
+<h4>{{msg}}</h4>
+{% endif %}
+
+{%include "./partials/_contact-form.html"%}
+
+
+
+{% endblock %}
